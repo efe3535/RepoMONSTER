@@ -1,7 +1,10 @@
-from distutils.command.install import install
-from setuptools.command import easy_install
+from setuptools import setup
 
 def install_needed():
-    easy_install.main( ["colorama", "requests", "pyqt5", "gitpython"] )
+    setup(
+        name='RepoMONSTER',
+        version='1.0',    
+        install_requires=["colorama", "requests", "pyqt5", "gitpython", "tkinter"],
+    )
 
 install_needed()

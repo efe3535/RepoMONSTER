@@ -32,11 +32,11 @@ def main():
         repo_choice = choice(repos)
         
         try:
-            showinfo(f"Cloning {Fore.GREEN}{repo_choice}{Fore.RESET} to {Fore.MAGENTA}{getcwd() + foldername.get()}{Fore.RESET}")
+            showinfo("Success!" ,f"Cloning {Fore.GREEN}{repo_choice}{Fore.RESET} to {Fore.MAGENTA}{getcwd() + foldername.get()}{Fore.RESET}")
             git.Repo.clone_from(repo_choice, getcwd() + "/" + foldername.get())
         
         except git.exc.GitCommandError:
-            showerror(f"{Fore.RED}Directory already exists, change the name please.{Fore.RESET}")
+            showerror("Error!", f"{Fore.RED}Directory already exists, change the name please.{Fore.RESET}")
 
 username_label = Label(text="Enter username to fetch repos at")
 username_label.pack()

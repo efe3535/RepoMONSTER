@@ -12,7 +12,7 @@ except ModuleNotFoundError:
     system("python3 setup.py install --user")
 
 helptext = f"""
-{Fore.GREEN + open("repomonster.txt","r").read() + Fore.RESET}
+{Fore.GREEN + open("res/repomonster.txt","r").read() + Fore.RESET}
 {Fore.YELLOW} --user=<User to select a random repo> {Fore.RESET}
 {Fore.LIGHTBLUE_EX} --dirname=<Repo to save> {Fore.RESET}
 """

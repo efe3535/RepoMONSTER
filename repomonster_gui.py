@@ -32,7 +32,7 @@ def main():
         repo_choice = choice(repos)
         
         try:
-            showinfo("OK!" ,f"Cloning {repo_choice} to {getcwd() + foldername.get()}")
+            showinfo("OK!" ,f"Cloning {repo_choice} to {getcwd()}/{foldername.get()}")
             git.Repo.clone_from(repo_choice, getcwd() + "/" + foldername.get())
             showinfo("Success!", "Cloned repo successfully.")
         except git.exc.GitCommandError:

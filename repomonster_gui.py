@@ -32,9 +32,9 @@ def main():
         repo_choice = choice(repos)
         
         try:
-            showinfo("Success!" ,f"Cloning {Fore.GREEN}{repo_choice}{Fore.RESET} to {Fore.MAGENTA}{getcwd() + foldername.get()}{Fore.RESET}")
+            showinfo("OK!" ,f"Cloning {repo_choice} to {getcwd() + foldername.get()}")
             git.Repo.clone_from(repo_choice, getcwd() + "/" + foldername.get())
-        
+            showinfo("Success!", "Cloned repo successfully.")
         except git.exc.GitCommandError:
             showerror("Error!", f"{Fore.RED}Directory already exists, change the name please.{Fore.RESET}")
 
